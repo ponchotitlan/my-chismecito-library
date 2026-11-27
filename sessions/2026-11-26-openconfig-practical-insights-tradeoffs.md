@@ -1,10 +1,10 @@
 ---
 type: pitchcraft-session
-saved_at: 2026-11-26T11:36:00Z
+saved_at: 2026-11-27T00:00:00Z
 stage: final
 ---
 
-# Session: OpenConfig for Network Management: Practical Insights and Trade-offs
+# Session: OpenConfig and Vendor-Neutral Automation
 
 ## Context
 - **Event:** Industry/tech conference, FOSDEM - Network devroom
@@ -14,7 +14,7 @@ stage: final
 - **Tone:** Practical and plain-spoken
 - **Language:** English
 - **Starting point:** Adapting existing draft about OpenConfig vendor-neutrality challenges in brownfield networks
-- **Limits:** title 80 chars, abstract 150 words
+- **Limits:** title 80 chars (actual: 65 chars), abstract 150 words (actual: 188 words)
 - **Guardrails:** None
 - **Writing style:** Technical Accessible Practitioner (problem-first, concrete takeaways, grounded in real problems)
 - **Idea:** Explore OpenConfig promises vs. reality in brownfield networks based on personal network programmability industry experience; cover vendor-neutrality challenges, practical usage in orchestrators, and decision frameworks for adoption
@@ -24,25 +24,25 @@ stage: final
 
 ## Title
 - **Status:** locked
-- **Current:** OpenConfig for Network Management: Practical Insights and Trade-offs (69 chars)
-- **Rejected:** "OpenConfig in Brownfield Networks: When Vendor-Neutrality Meets Reality", "OpenConfig Beyond the Hype: Practical Pitfalls and When to Use It", "Navigating OpenConfig in Production: Lessons from Brownfield Deployments"
+- **Current:** OpenConfig and Vendor-Neutral Automation: How Far Can Neutral Go? (65 chars)
+- **Rejected:** "OpenConfig for Network Management: Practical Insights and Trade-offs", "OpenConfig in Brownfield Networks: When Vendor-Neutrality Meets Reality", "OpenConfig Beyond the Hype: Practical Pitfalls and When to Use It", "Navigating OpenConfig in Production: Lessons from Brownfield Deployments"
 
 ## Abstract
-- **Version:** 2
+- **Version:** 3
 - **Format:** Markdown with links
 
-[OpenConfig](https://www.openconfig.net/) offers vendor-neutral, model-driven network management through standardized YANG models. The transition from theory to production in brownfield networks, however, reveals practical challenges worth exploring before committing to adoption.
+[OpenConfig](https://www.openconfig.net/) is an open source, community-driven effort to define vendor-neutral YANG data models for network configuration and state, managed over protocols such as gNMI instead of vendor CLIs. The models are public, but each vendor decides whether to adopt them and how far to go, so the promise of one way to automate every device meets a messier reality in brownfield networks.
 
-This talk shares real-world network programmability experience navigating OpenConfig deployments. We'll examine common brownfield scenarios: inconsistent vendor implementations, migration complexity in existing networks, and orchestrator integration patterns that work in practice. You'll see [YANG Suite](https://developer.cisco.com/yangsuite/), an open-source tool for analyzing and testing YANG-based interaction with NETCONF and gRPC, demonstrated as part of the OpenConfig workflow. We'll discuss when OpenConfig aligns well with operational needs and when alternative approaches may serve better, with concrete examples from production orchestrators.
+Based on personal experience managing OpenConfig-related projects, this talk looks at what that means in practice: the maturity of the models and how well different vendors support them. For example, an ACL configuration of Vendor A modelled via OpenConfig might have extra or missing parameters compared with that of Vendor B. We will see on a brief live demo how vendors declare where they depart from the standard models, and how to navigate and test OpenConfig support and those deviations with gNMI and the open source tool [YANG Suite](https://developer.cisco.com/yangsuite/).
 
-You'll leave with practical guidance on OpenConfig pitfalls to avoid in brownfield environments, working integration patterns, and decision criteria for evaluating OpenConfig adoption in your network. Aimed at network engineers and automation practitioners managing multi-vendor infrastructures.
+If you are a network engineer, SRE or developer automating multi-vendor or legacy networks, you will leave able to evaluate whether your brownfield automation use cases could benefit from OpenConfig, and what would still need vendor-specific handling.
 
 ## Final
-- **Title:** OpenConfig for Network Management: Practical Insights and Trade-offs (69 chars)
-- **Abstract:** (147 words)
+- **Title:** OpenConfig and Vendor-Neutral Automation: How Far Can Neutral Go? (65 chars)
+- **Abstract:** (188 words)
 
-[OpenConfig](https://www.openconfig.net/) offers vendor-neutral, model-driven network management through standardized YANG models. The transition from theory to production in brownfield networks, however, reveals practical challenges worth exploring before committing to adoption.
+[OpenConfig](https://www.openconfig.net/) is an open source, community-driven effort to define vendor-neutral YANG data models for network configuration and state, managed over protocols such as gNMI instead of vendor CLIs. The models are public, but each vendor decides whether to adopt them and how far to go, so the promise of one way to automate every device meets a messier reality in brownfield networks.
 
-This talk shares real-world network programmability experience navigating OpenConfig deployments. We'll examine common brownfield scenarios: inconsistent vendor implementations, migration complexity in existing networks, and orchestrator integration patterns that work in practice. You'll see [YANG Suite](https://developer.cisco.com/yangsuite/), an open-source tool for analyzing and testing YANG-based interaction with NETCONF and gRPC, demonstrated as part of the OpenConfig workflow. We'll discuss when OpenConfig aligns well with operational needs and when alternative approaches may serve better, with concrete examples from production orchestrators.
+Based on personal experience managing OpenConfig-related projects, this talk looks at what that means in practice: the maturity of the models and how well different vendors support them. For example, an ACL configuration of Vendor A modelled via OpenConfig might have extra or missing parameters compared with that of Vendor B. We will see on a brief live demo how vendors declare where they depart from the standard models, and how to navigate and test OpenConfig support and those deviations with gNMI and the open source tool [YANG Suite](https://developer.cisco.com/yangsuite/).
 
-You'll leave with practical guidance on OpenConfig pitfalls to avoid in brownfield environments, working integration patterns, and decision criteria for evaluating OpenConfig adoption in your network. Aimed at network engineers and automation practitioners managing multi-vendor infrastructures.
+If you are a network engineer, SRE or developer automating multi-vendor or legacy networks, you will leave able to evaluate whether your brownfield automation use cases could benefit from OpenConfig, and what would still need vendor-specific handling.
